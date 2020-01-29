@@ -1,3 +1,5 @@
+require 'pry'
+
 class Genre 
   attr_reader :name 
   
@@ -13,7 +15,7 @@ class Genre
   end 
   
   def songs 
-    Songs.all.select { |s| s.genre == self.name }
+    Songs.all.select { |s| s.genre == self binding.pry }
   end 
   
   def artists
